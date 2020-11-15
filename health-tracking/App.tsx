@@ -80,8 +80,8 @@ export default function App() {
         />
         {!loggedIn ? (
           <View style={styles.container}>
-            <Text darkColor='#f0f' style={{ fontSize: 40, fontWeight: 'bold' }}>
-              Welcome to HT
+            <Text style={{ fontSize: 35, fontWeight: 'bold', color: 'black' }}>
+              Welcome to Tap for Health
             </Text>
             <AwesomeTextInput
               label='Social Number'
@@ -92,7 +92,9 @@ export default function App() {
                   borderWidth: 1,
                   borderColor: 'grey',
                   borderRadius: 10,
-                  marginBottom: 10
+                  marginBottom: 10,
+
+                  marginTop: 50
                 },
                 title: {
                   backgroundColor: 'white'
@@ -131,9 +133,18 @@ export default function App() {
             />
             <TouchableOpacity
               onPress={handleSubmit}
-              style={{ backgroundColor: 'red', padding: 30, marginTop: 10 }}
+              style={{
+                backgroundColor: '#9e5da3',
+
+                paddingLeft: 50,
+                paddingRight: 50,
+                paddingTop: 20,
+                paddingBottom: 20,
+                marginTop: 10,
+                borderRadius: 100
+              }}
             >
-              <Text style={{ fontSize: 30, color: 'black' }}>Log in</Text>
+              <Text style={{ fontSize: 30, color: 'white' }}>Log in</Text>
             </TouchableOpacity>
           </View>
         ) : (
@@ -149,7 +160,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#f4f2f4',
     alignItems: 'center',
     justifyContent: 'center'
   }
